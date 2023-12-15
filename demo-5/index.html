@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Demo 1 : KO </title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.0/knockout-min.js" 
+            integrity="sha512-xXZWdp+Qu5oSyYvkV6tcCsw+LhXwBZAh8qhD6Ml44PhxjroiMjrLhP9wvvBnhHzkc9A9kLBWBZ6HGaqqtxNd5g==" 
+            crossorigin="anonymous" referrerpolicy="no-referrer">
+        </script>
+        <script src="main.js">  </script>
+    </head>
+    <body>
+    <div>
+        <table>
+            <thead>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Gender</th>
+                <th>Date of Birth</th>
+            </thead>
+            <tbody data-bind="foreach: people ">
+                <tr>
+                    <td data-bind="text: firstName"></td>
+                    <td data-bind="text: lastName"></td>
+                    <td data-bind="text: gender"></td>
+                    <td data-bind="text: dob"></td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+    <div>
+        <form>
+            <table>
+                <tr>
+                    <td>Enter Name:</td>
+                    <td>
+                        <input type="text" id="fn" data-bind="value: person.firstName" />
+                        <input type="text" id="ln" data-bind="value: person.lastName" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Gender:</td>
+                    <td>
+                        <input type="radio" name="gn" value="M" id="gn"  data-bind="checked: person.gender"/> Male
+                        <input type="radio" name="gn" value="F" id="gn" data-bind="checked: person.gender"/> Female
+                    </td>
+                </tr>
+                <tr>
+                    <td>Date of Birth [dd-mm-yyyy] :</td>
+                    <td>
+                        <input type="text" id="dob" data-bind="value: person.dob" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" value="Save" id="save" data-bind="click: addPerson " />
+                    </td>
+                </tr>
+            </table>
+        </form>  
+    </div>
+    </body>
+</html>
