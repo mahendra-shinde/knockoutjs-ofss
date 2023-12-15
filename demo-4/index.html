@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Demo 1 : KO </title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.0/knockout-min.js" 
+            integrity="sha512-xXZWdp+Qu5oSyYvkV6tcCsw+LhXwBZAh8qhD6Ml44PhxjroiMjrLhP9wvvBnhHzkc9A9kLBWBZ6HGaqqtxNd5g==" 
+            crossorigin="anonymous" referrerpolicy="no-referrer">
+        </script>
+        <script src="main.js">  </script>
+    </head>
+    <body>
+    <div>
+        <table>
+            <thead>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Gender</th>
+                <th>Date of Birth</th>
+            </thead>
+            <tbody data-bind="foreach: people ">
+                <tr>
+                    <td data-bind="text: firstName"></td>
+                    <td data-bind="text: lastName"></td>
+                    <td data-bind="text: gender"></td>
+                    <td data-bind="text: dob"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    </body>
+</html>
