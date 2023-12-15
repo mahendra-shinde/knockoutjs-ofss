@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Demo 1 : KO </title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.0/knockout-min.js" 
+            integrity="sha512-xXZWdp+Qu5oSyYvkV6tcCsw+LhXwBZAh8qhD6Ml44PhxjroiMjrLhP9wvvBnhHzkc9A9kLBWBZ6HGaqqtxNd5g==" 
+            crossorigin="anonymous" referrerpolicy="no-referrer">
+        </script>
+        <script src="main.js">  </script>
+        <!-- HTML Template for Knock-Out-->
+        <script type="text/html" id="person-template">
+            <table>
+                <tr>
+                    <td>Name: </td>
+                    <td>
+                        <span data-bind="text: firstName"/>
+                        <span data-bind="text: lastName"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Gender: </td>
+                    <td>
+                        <span data-bind="text: gender"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Date of Birth: </td>
+                    <td>
+                        <span data-bind="text: dob"/>
+                    </td>
+                </tr>
+                </table>
+        </script>
+    </head>
+    <body>
+
+    <div data-bind="foreach: people">
+        <div data-bind="template: { name: 'person-template' }" /></div>
+    </div>
+ 
+    </body>
+</html>
