@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Demo 1 : KO </title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.0/knockout-min.js" 
+            integrity="sha512-xXZWdp+Qu5oSyYvkV6tcCsw+LhXwBZAh8qhD6Ml44PhxjroiMjrLhP9wvvBnhHzkc9A9kLBWBZ6HGaqqtxNd5g==" 
+            crossorigin="anonymous" referrerpolicy="no-referrer">
+        </script>
+        <script src="main.js">  </script>
+    </head>
+    <body>
+    <form name="frm1">
+        Enter your name : <input type="text" id="name" data-bind="value: name" /><br/>
+        <input type="button" value="Save" id="save" />
+    </form>    
+    <!-- HTML elements other than INPUT elements
+         Cant be used for Dynamic / Two way binding -->
+    <div>Welcome <span id="urname" data-bind="text: name"></span></div>
+    </body>
+</html>
