@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Demo 1 : KO </title>
+        <title>Demo 6 : COmputed </title>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.0/knockout-min.js" 
             integrity="sha512-xXZWdp+Qu5oSyYvkV6tcCsw+LhXwBZAh8qhD6Ml44PhxjroiMjrLhP9wvvBnhHzkc9A9kLBWBZ6HGaqqtxNd5g==" 
             crossorigin="anonymous" referrerpolicy="no-referrer">
@@ -18,12 +18,12 @@
         <input type="text" data-bind="value: lastName "/><br/>
         
         Select the Gender :
-        <input type="radio" data-bind="value: gender" name="gender" value="M"/> Male
-        <input type="radio" data-bind="value: gender" name="gender" value="F"/> Female <br/>
+        <input type="radio" data-bind="checked: gender" name="gender" value="M"/> Male
+        <input type="radio" data-bind="checked: gender" name="gender" value="F"/> Female <br/>
 
 
     </form>
-    <span data-bind="text: fullName"></span>
+    <span data-bind="text: message"></span>
     </div>
     </body>
 </html>

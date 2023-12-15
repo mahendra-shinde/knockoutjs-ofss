@@ -10,6 +10,7 @@ var viewModel = function(fname, lname, gender){
     }, this );
 
     this.message = ko.pureComputed(function(){
+        console.log("Gender selected is "+ this.gender() );
         return (this.gender()=="M"? "Mr" : "Ms.") +" "+ this.fullName();
     }, this);
 }
